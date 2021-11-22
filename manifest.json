@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Google Evident by Afiliatti",
+    "description": "Identifică rapid în rezultatele de căutare Google site-urile dintr-o listă proprie (ex: magazine care au programe de afiliere active).",
+    "version": "0.0.1",
+    "icons": {
+        "16": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
+    },
+    "options_page": "settings/settings.html",
+    "action": {
+        "default_title": "Google Evident"
+    },
+    "permissions": ["storage","tabs"],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "content_scripts": [{
+        "js": ["js/jquery.min.js","js/background.js"],
+        "matches": ["<all_urls>"],
+        "all_frames": true,
+		"run_at" : "document_end"
+    }]
+}
