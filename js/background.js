@@ -1,5 +1,5 @@
 var url = document.location.href;
-console.log('[afiliatti chrome] '+url);
+//console.log('[afiliatti chrome] '+url);
 if(url.search('google.com/search\\?q=') != "-1" || url.search('google.ro/search\\?q=') != "-1") {
 
     //database
@@ -9,7 +9,7 @@ if(url.search('google.com/search\\?q=') != "-1" || url.search('google.ro/search\
       }, function(items) {
         magazine = items.magazine.split(/\n/);
 
-        console.log('[afiliatti chrome] '+magazine.length+' domains in database');
+        //console.log('[afiliatti chrome] '+magazine.length+' domains in database');
 
         //search and mark if is advertiser
         $(document).ready(function() {
@@ -29,5 +29,5 @@ if(url.search('google.com/search\\?q=') != "-1" || url.search('google.ro/search\
 
 }
 else {
-    console.log('[afiliatti chrome] Nu e pagină de rezultate Google. Ignorăm.');
+    //console.log('[afiliatti chrome] Nu e pagină de rezultate Google. Ignorăm.');
 }
